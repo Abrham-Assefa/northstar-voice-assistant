@@ -1,0 +1,14 @@
+{
+  "name": "customer-voice-assistant",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server.js",
+    "setup:speech": "brew install whisper.cpp && mkdir -p .models && curl --fail --location --output .models/ggml-tiny.bin https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-tiny.bin",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
